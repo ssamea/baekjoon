@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import heapq
 
 n, m = map(int, input().split())
@@ -26,7 +26,7 @@ while heap:
         # 더 이상 선행문제가 없으면 0이 됨. 그러면 해당 문제를 heap에 넣는다.
         if precede[i] == 0:
             heapq.heappush(heap, i)
-=======
+
 import heapq
 
 n, m = map(int, input().split())
@@ -54,5 +54,5 @@ while heap:
         # 더 이상 선행문제가 없으면 0이 됨. 그러면 해당 문제를 heap에 넣는다.
         if precede[i] == 0:
             heapq.heappush(heap, i)
->>>>>>> 52c195cc8530c22298a6358abc9753e52bfd9eb1
+
 print(*result)
