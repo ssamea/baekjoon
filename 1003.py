@@ -1,19 +1,17 @@
-def count_fibonacci(n):
-    zero_count = [1, 0]
-    one_count = [0, 1]
-    if n <= 1:
-        return
 
-    for i in range(2, n + 1):
-        zero_count.append(zero_count[i - 1] + zero_count[i - 2])
-        one_count.append(one_count[i - 1] + one_count[i - 2])
+# 각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력
 
-    return zero_count, one_count
+t = int(input())
+cnt1=[1,0]
+cnt2=[0,1]
 
+for i in range(t):
+    n = int(input())
 
-n = int(input())
-zero_count, one_count = count_fibonacci(40)
+    for i in range(2, 41):
+        cnt1.append(cnt1[i-1]+cnt1[i-2])
+        cnt2.append(cnt2[i - 1] + cnt2[i - 2])
 
-for _ in range(n):
-    m = int(input())
-    print("%d %d" % (zero_count[m], one_count[m]))
+    print("%d %d" % (cnt1[n], cnt2[n]))
+    #cnt1,cnt2=0,0
+
